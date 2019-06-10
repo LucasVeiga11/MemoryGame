@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:gravity="center"
+        android:stretchColumns="*"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pos1.1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos1.2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos1.3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos1.4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pos2.1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos2.2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2"/>
+
+            <ImageView
+                android:id="@+id/pos2.3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos2.4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pos3.1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos3.2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos3.3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos3.4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pos4.1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos4.2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos4.3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos4.4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pos5.1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos5.2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos5.3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos5.4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pos6.1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos6.2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos6.3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos6.4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/pos7.1"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos7.2"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos7.3"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+            <ImageView
+                android:id="@+id/pos7.4"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                app:srcCompat="@drawable/quadrado2" />
+
+
+        </TableRow>
+
+
+    </TableLayout>
+</android.support.constraint.ConstraintLayout>
