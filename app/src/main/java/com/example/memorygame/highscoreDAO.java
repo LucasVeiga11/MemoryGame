@@ -14,8 +14,6 @@ public class highscoreDAO {
 
         Banco banco = new Banco (context);
         ContentValues valores = new ContentValues();
-
-        valores.put("id", iten.getId_score());
         valores.put("nome", iten.getNome() );
         valores.put("pontos", iten.getScore() );
         SQLiteDatabase db = banco.getWritableDatabase();

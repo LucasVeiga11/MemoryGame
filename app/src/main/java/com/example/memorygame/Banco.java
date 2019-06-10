@@ -6,7 +6,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class Banco extends SQLiteOpenHelper {
 
-    private static final String NOME_BANCO = "highscores";
+    private static final String NOME_BANCO = "highscore";
     private static final int VERSAO_BANCO = 1;
 
     public Banco(Context context){

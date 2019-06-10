@@ -22,7 +22,6 @@ public class MostrarHighscore extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mostrar_highscore);
-        final int sessionId = getIntent().getIntExtra("EXTRA_SESSION_ID", 0);
         lvIten = (ListView) findViewById(R.id.lvItens);
 
 
@@ -33,7 +32,7 @@ public class MostrarHighscore extends AppCompatActivity {
         itens = highscoreDAO.mostrar(this,idlista);
 //        adapter = new ArrayAdapter(this,
 //                android.R.layout.simple_list_item_1, lista );
-        adapter = new adapterHighscore(MostrarHighscore.this, itens);
+        adapter = new adapterHighscore(this, itens);
         lvIten.setAdapter(adapter);
     }
 
