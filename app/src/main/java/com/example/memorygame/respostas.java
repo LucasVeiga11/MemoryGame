@@ -1,12 +1,15 @@
 package com.example.memorygame;
 
 import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.constraint.ConstraintLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +19,7 @@ import java.util.List;
 public class respostas extends AppCompatActivity {
     private ConstraintLayout layout;
     private ImageView img;
+    String aux;
 
 
     @SuppressLint("ClickableViewAccessibility")
@@ -62,11 +66,30 @@ public class respostas extends AppCompatActivity {
                     super.onSwipeBottom();
                     i++;
                 } else {
-                    Highscore score = new Highscore();
-                    score.setNome("teste");
-                    score.setScore(a);
-                    highscoreDAO.inserir(score, respostas.this);
-                    startActivity(intent2);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(respostas.this);
+                    builder.setTitle("Você Perdeu!");
+                    builder.setMessage("Entre seu nome");
+                    builder.setCancelable(true);
+                    final EditText input = new EditText(respostas.this);
+                    builder.setView(input);
+                    builder.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            String YouEditTextValue = input.getText().toString();
+                            Intent intent = new Intent(respostas.this, MostrarHighscore.class);
+                            startActivity(intent);
+                            Highscore score = new Highscore();
+                            score.setNome(YouEditTextValue);
+                            score.setScore(a);
+                            highscoreDAO.inserir(score, respostas.this);
+                            startActivity(intent2);
+
+
+                        }
+                    });
+                    builder.show();
+
                 }
 
                 if(num[i] == 0){
@@ -96,11 +119,27 @@ public class respostas extends AppCompatActivity {
                     super.onSwipeTop();
                     i++;
                 } else {
-                    Highscore score = new Highscore();
-                    score.setNome("teste");
-                    score.setScore(a);
-                    highscoreDAO.inserir(score, respostas.this);
-                    startActivity(intent2);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(respostas.this);
+                    builder.setTitle("Você Perdeu!");
+                    builder.setMessage("Entre seu nome");
+                    builder.setCancelable(true);
+                    final EditText input = new EditText(respostas.this);
+                    builder.setView(input);
+                    builder.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                            String YouEditTextValue = input.getText().toString();
+                            Highscore score = new Highscore();
+                            score.setNome(YouEditTextValue);
+                            score.setScore(a);
+                            highscoreDAO.inserir(score, respostas.this);
+                            startActivity(intent2);
+
+
+                        }
+                    });
+
                 }
 
                 if(num[i] == 0){
@@ -127,11 +166,28 @@ public class respostas extends AppCompatActivity {
                 super.onSwipeLeft();
                             i++;
                         }else {
-                                Highscore score = new Highscore();
-                                score.setNome("teste");
-                                score.setScore(a);
-                                highscoreDAO.inserir(score, respostas.this);
-                                startActivity(intent2);
+                                AlertDialog.Builder builder = new AlertDialog.Builder(respostas.this);
+                                builder.setTitle("Você Perdeu!");
+                                builder.setMessage("Entre seu nome");
+                                builder.setCancelable(true);
+                                final EditText input = new EditText(respostas.this);
+                                builder.setView(input);
+                                builder.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialog, int which) {
+
+                                        String YouEditTextValue = input.getText().toString();
+                                        Highscore score = new Highscore();
+                                        score.setNome(YouEditTextValue);
+                                        score.setScore(a);
+                                        highscoreDAO.inserir(score, respostas.this);
+                                        startActivity(intent2);
+
+
+                                    }
+                                });
+                                builder.show();
+
                 }
                 if(num[i] == 0){
                     a++;
@@ -158,11 +214,29 @@ public class respostas extends AppCompatActivity {
                 super.onSwipeRight();
                                 i++;
                             }else {
-                                    Highscore score = new Highscore();
-                                    score.setNome("teste");
-                                    score.setScore(a);
-                                    highscoreDAO.inserir(score, respostas.this);
-                                    startActivity(intent2);
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(respostas.this);
+                                    builder.setTitle("Você Perdeu!");
+                                    builder.setMessage("Entre seu nome");
+                                    builder.setCancelable(true);
+                                    final EditText input = new EditText(respostas.this);
+                                    builder.setView(input);
+                                    builder.setNeutralButton("Ok", new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialog, int which) {
+
+                                           final String YouEditTextValue = input.getText().toString();
+                                            Highscore score = new Highscore();
+                                            score.setNome(YouEditTextValue);
+                                            score.setScore(a);
+                                            highscoreDAO.inserir(score, respostas.this);
+                                            startActivity(intent2);
+
+
+
+                                        }
+                                    });
+                                    builder.show();
+
             }
                 if(num[i] == 0){
                     a++;

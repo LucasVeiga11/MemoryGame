@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Random rand = new Random();
     private int[] nums = new int[50];
     private volatile Thread thread;
+    private int tempo = 3000;
 
 
     @Override
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                         @Override
                     public void run() {
                         ImageView img = (ImageView) findViewById(R.id.imageView);
-                        position++;
+
 
                         int n = rand.nextInt(4) + 1;
 
@@ -58,32 +59,47 @@ public class MainActivity extends AppCompatActivity {
                             } else{
                                 a = (Integer) savedInstanceState.getSerializable("rodadas");
                             }
-                        if (n == 1) {
+
+                            if(a%3 == 0 && tempo > 750)
+                                tempo = (int) (tempo * 0.80);
+                            if(position >= 4) {
+
+                                intent.putExtra("valor",nums);
+                                intent.putExtra("rodadas",a);
+                                mTimer.cancel();
+                                startActivity(intent);
+                                finish();
+
+
+
+                            }
+                            position++;
+                        if (n == 1 && position <= 4) {
                             Animation fadeInAnimation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_in);
                           //  Animation fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.your_fade_in_anim);
                             img.startAnimation(fadeInAnimation);
                             img.setImageResource(R.drawable.uparrow);
                         }
-                        if (n == 2) {
+                        if (n == 2 && position <= 4) {
                             Animation fadeInAnimation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_in);
                             //  Animation fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.your_fade_in_anim);
                             img.startAnimation(fadeInAnimation);
                             img.setImageResource(R.drawable.downarrow);
                         }
-                        if (n == 3) {
+                        if (n == 3 && position <= 4) {
                             Animation fadeInAnimation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_in);
                             //  Animation fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.your_fade_in_anim);
                             img.startAnimation(fadeInAnimation);
 
                             img.setImageResource(R.drawable.rightarrow);
                         }
-                        if (n == 4) {
+                        if (n == 4 && position <= 4) {
                             Animation fadeInAnimation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_in);
                             //  Animation fadeInAnimation = AnimationUtils.loadAnimation(this, R.anim.your_fade_in_anim);
                             img.startAnimation(fadeInAnimation);
                             img.setImageResource(R.drawable.leftarrow);
                         }
-                            Animation fadeInAnimation = AnimationUtils.loadAnimation(MainActivity.this, R.anim.fade_in);
+
 
                         for(int i = 0; i <nums.length; i++) {
                             if(nums[i] == 0) {
@@ -91,18 +107,7 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             }
                         }
-                        if(position >= 4) {
-                            String texto = String.valueOf(nums[0]);
 
-                            intent.putExtra("valor",nums);
-                            intent.putExtra("rodadas",a);
-                            mTimer.cancel();
-                            position = 0;
-                            startActivity(intent);
-
-
-
-                        }
                     }
 
 
@@ -112,7 +117,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
 
-        }, 0, 2000);
+        }, 0, tempo);
 
 
 

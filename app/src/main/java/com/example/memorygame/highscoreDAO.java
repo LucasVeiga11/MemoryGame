@@ -24,7 +24,7 @@ public class highscoreDAO {
         List<Highscore> listar = new ArrayList<>();
         Banco banco = new Banco(context);
         SQLiteDatabase db = banco.getReadableDatabase();
-        String sql = "SELECT * FROM highscores ORDER BY pontos DESC";
+        String sql = "SELECT * FROM highscores ORDER BY pontos DESC LIMIT 5";
         Cursor cursor = db.rawQuery(sql, null);
         if(cursor.getCount() > 0){
             cursor.moveToFirst();
